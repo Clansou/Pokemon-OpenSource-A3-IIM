@@ -24,7 +24,7 @@ export default async function pokebattle(poke1, poke2) {
     }else if (poke1Stats < poke2Stats) {
         return poke2Name;
     }else{
-        "Wawawaw it's a draw !!!"
+        return "Wawawaw it's a draw !!!";
     }
   } catch (error) {
     console.error("Error fetching Pokemon:", error);
