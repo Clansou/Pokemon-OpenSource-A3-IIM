@@ -1,5 +1,9 @@
+/**
+ * Returns a random pokemon from the 1st to the 4th generation
+ * @returns {JSON} with the data of the pokemon
+ */
 export default async function getAleatoirePokemon() {
-    const idPokemon = Math.floor(Math.random() * 500 + 1);
+    const idPokemon = Math.floor(Math.random() * 493 + 1);
     
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`);
