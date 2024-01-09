@@ -5,7 +5,6 @@
  * @throws {Error} - Throws an error if there is an issue fetching the pokemon data.
  */
 export default async function catchThemAll(pokemon) {
-    console.log(pokemon);
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon}`);
         const data = await response.json();
