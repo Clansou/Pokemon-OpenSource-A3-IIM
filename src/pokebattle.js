@@ -1,3 +1,10 @@
+/**
+ * Returns the winner of the battle bases on the base stats
+ * @param {Object} pokemon - The Pokemon data containing name and stats
+ * @returns {String} The name of the winning Pokemon or a draw message
+ * @throws {Error} - Throws an error if there is an issue fetching the pokemon data.
+ */
+
 async function getAverageBaseStat(pokemon) {
   const { name, stats } = pokemon;
   const totalBaseStat = stats.reduce((acc, { base_stat }) => acc + base_stat, 0);
