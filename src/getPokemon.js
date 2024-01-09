@@ -1,6 +1,7 @@
 /**
  * Returns a random pokemon from the 1st to the 4th generation
- * @returns {JSON} with the data of the pokemon
+ * @returns {Array} with the data of the pokemon
+ * @throws {Error} - Throws an error if there is an issue fetching the pokemon data.
  */
 export default async function getAleatoirePokemon() {
     const idPokemon = Math.floor(Math.random() * 493 + 1);
