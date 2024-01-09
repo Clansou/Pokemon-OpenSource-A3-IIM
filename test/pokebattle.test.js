@@ -1,10 +1,8 @@
 import pokebattle from '../src/pokebattle';
-import getAleatoirePokemon from "../src/getPokemon";
 
-describe('pokebattle()', () => {
+describe('pokebattle(poke1, poke2)', () => {
   it('should return stats of pokemons', async () => {
-        const [poke1, poke2] = await Promise.all([getAleatoirePokemon(), getAleatoirePokemon()]);
-        const result = await pokebattle(poke1, poke2);
+        const result = await pokebattle(1, 2);
         console.log(result);
         expect(result).toBeDefined();
     });

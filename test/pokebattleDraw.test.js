@@ -1,10 +1,8 @@
 import pokebattle from '../src/pokebattle';
-import getAleatoirePokemon from "../src/getPokemon";
 
-describe('pokebattle()', () => {
+describe('pokebattle(poke1, poke2)', () => {
   it('should return draw', async () => {
-        const poke1 = await getAleatoirePokemon();
-        const result = await pokebattle(poke1, poke1);
+        const result = await pokebattle(1, 1);
         expect(result).toBe("Wawawaw it's a draw !!!");
         console.log(result);
     });
