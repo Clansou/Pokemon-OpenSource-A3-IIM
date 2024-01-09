@@ -6,7 +6,6 @@
  */
 
 async function getAverageBaseStat(pokemon) {
-    console.log(pokemon);
   const { name, stats } = pokemon;
   const totalBaseStat = stats.reduce((acc, { base_stat }) => acc + base_stat, 0);
   const averageBaseStat = totalBaseStat / stats.length;
@@ -23,7 +22,6 @@ export default async function pokebattle(pokemon1, pokemon2) {
     const [poke1Name, poke1Stats] = await getAverageBaseStat(datapoke1);
     const [poke2Name, poke2Stats] = await getAverageBaseStat(datapoke2);
 
-    console.log([poke1Name, poke1Stats], [poke2Name, poke2Stats]);
     if (poke1Stats > poke2Stats) {
         return poke1Name;
     }else if (poke1Stats < poke2Stats) {
@@ -32,7 +30,7 @@ export default async function pokebattle(pokemon1, pokemon2) {
         return "Wawawaw it's a draw !!!";
     }
   } catch (error) {
-    console.error("Error fetching Pokemon:", error);
+    //console.error("Error fetching Pokemon:", error);
     throw error;
   }
 }
